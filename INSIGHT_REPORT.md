@@ -158,7 +158,7 @@ The full analysis is presented through an interactive 5-page Power BI dashboard:
 4. **Reorder Alert Panel** — reorder status, supplier lead time
 5. **Trend Analysis** — monthly patterns, seasonal insights
 
-*(See dashboard screenshots in the `/screenshots` folder)*
+*(See dashboard screenshots in the [/04_screenshots](./04_screenshots) folder)*
 
 ---
 
