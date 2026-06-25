@@ -53,6 +53,12 @@ dim_warehouse ──┐   │   ┌── dim_product
                      │
                 dim_supplier
 ```
+### 🏗️ Data Model
+Here is the data model schema used for this project:
+
+![Data Model](./04_screenshots/data_model_in_power_bi.PNG)
+
+---
 
 | Table | Role |
 |---|---|
