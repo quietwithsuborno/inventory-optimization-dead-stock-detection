@@ -77,7 +77,7 @@ On top of this schema sit **7 analytical SQL views** that power the dashboard
 6. Inventory Turnover
 7. Supplier Performance.
 
-The dashboard itself adds another layer of logic on top — 20+ DAX measures handling everything from conditional aggregation to BLANK-vs-zero edge cases. Full reference: [`03_powerbi/DAX_MEASURES.md`](./03_powerbi/DAX_MEASURES.md).
+The dashboard itself adds another layer of logic on top — 20+ DAX measures handling everything from conditional aggregation to BLANK-vs-zero edge cases. Full reference: [`DAX_MEASURES`](./03_powerbi/DAX_MEASURES.md).
 
 ---
 
