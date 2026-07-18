@@ -2,9 +2,11 @@
 
 An end-to-end data analytics project that identifies dead stock, segments inventory by revenue and demand volatility, and builds a proactive reorder system for a simulated FMCG retail company in Bangladesh.
 
+**Domain:** Retail / FMCG Supply Chain
+
 **Tools:** Excel · SQL Server (SSMS) · Power BI
 
-**Type:** Self-directed portfolio project | Simulated company data
+**Dataset:** Simulated realistic data
 
 ---
 
@@ -14,11 +16,12 @@ An end-to-end data analytics project that identifies dead stock, segments invent
 
 RetailMart BD — a mid-sized FMCG retailer running 3 warehouses and 35 SKUs — had no data-backed system to answer three basic questions:
 
-- Which products are tying up capital on the shelf with no movement?
-- Which products are at risk of stocking out?
-- When, and how much, should we reorder?
+- Which products have been sitting in the warehouse for months, blocking working capital?
+- Which products are in high demand but frequently running out of stock?
+- When is the right time to reorder, and what is the optimal order quantity?
+- Which suppliers have the longest delays, and how is that contributing to stockouts?
 
-This project builds that system from scratch — starting with messy, real-world-style raw data and ending with an interactive 5-page dashboard.
+Consequently, the company is suffering from two contradictory issues at the same time: Overstocking and Stockouts. Having both problems simultaneously indicates inefficiencies across three major departments: Procurement, Warehousing, and Sales.
 
 ---
 
