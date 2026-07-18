@@ -2,26 +2,30 @@
 
 An end-to-end data analytics project that identifies dead stock, segments inventory by revenue and demand volatility, and builds a proactive reorder system for a simulated FMCG retail company in Bangladesh.
 
-**Domain:** Retail / FMCG Supply Chain
+🏢 **Domain:** Retail / FMCG Supply Chain
 
-**Tools:** Excel · SQL Server (SSMS) · Power BI
+🛠️ **Tools:** Excel · SQL Server (SSMS) · Power BI
 
-**Dataset:** Simulated realistic data
+📊 **Dataset:** Simulated realistic data
 
 ---
 
 ## 🧩 The Problem
 
-> *"Our warehouses are full, but we're out of cash. And customers still complain we're out of stock."*
+> 💬 *"Our warehouses are full, but we're out of cash. And customers still complain we're out of stock."*
 
-RetailMart BD — a mid-sized FMCG retailer running 3 warehouses and 35 SKUs — had no data-backed system to answer three basic questions:
+🏪 RetailMart BD — a mid-sized FMCG retailer running 3 warehouses and 35 SKUs — had no data-backed system to answer three basic questions:
 
-- Which products have been sitting in the warehouse for months, blocking working capital?
-- Which products are in high demand but frequently running out of stock?
-- When is the right time to reorder, and what is the optimal order quantity?
-- Which suppliers have the longest delays, and how is that contributing to stockouts?
+* 📉 Which products have been sitting in the warehouse for months, blocking working capital?
+* 📈 Which products are in high demand but frequently running out of stock?
+* ⏰ When is the right time to reorder, and what is the optimal order quantity?
+* 🚚 Which suppliers have the longest delays, and how is that contributing to stockouts?
 
-Consequently, the company is suffering from two contradictory issues at the same time: Overstocking and Stockouts. Having both problems simultaneously indicates inefficiencies across three major departments: Procurement, Warehousing, and Sales.
+Consequently, the company is suffering from two contradictory issues at the same time: **Overstocking** and **Stockouts**. Having both problems simultaneously indicates severe inefficiencies across three major departments:
+
+1. 🛒 **Procurement** (Purchasing & Vendor Management)
+2. 🏬 **Warehousing** (Inventory & Storage Management)
+3. 💼 **Sales** (Demand Forecasting & Market Alignment)
 
 ---
 
