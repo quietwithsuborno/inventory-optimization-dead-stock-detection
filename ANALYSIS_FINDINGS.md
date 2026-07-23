@@ -256,3 +256,53 @@ This will help determine not only how old inventory is, but also whether current
 
 ---
 
+## 💰 Dead Stock Financial Impact Analysis Findings
+
+### 🔍 Key Findings
+
+This analysis evaluated the financial impact of dead stock inventory by identifying which product categories, suppliers, and supplier countries contribute most to inventory capital that is no longer generating business value.
+
+### 📦 Lifestyle Products Drive the Majority of Dead Stock Capital
+
+The **Lifestyle category** generated the highest amount of dead-stock capital, accounting for approximately **55% of total dead inventory value**.
+
+This suggests that demand for these products was significantly lower than expected, resulting in inventory remaining unsold for extended periods.
+
+### 🏭 Pacific Imports Ltd Is the Largest Contributor to Dead Stock
+
+Among all suppliers, **Pacific Imports Ltd** contributed the highest dead-stock value, representing over **80% of total dead capital**.
+
+This indicates that inventory sourced from this supplier requires closer review to determine whether purchasing volumes, demand forecasts, or replenishment decisions need adjustment.
+
+### 🌍 Singapore-Sourced Products Carry the Highest Inventory Risk
+
+Products sourced from **Singapore** account for the majority of dead-stock capital in the business.
+
+Although only a small number of products are involved, they represent a disproportionately large share of inventory value that is no longer moving.
+
+This highlights a concentration of inventory risk within a specific sourcing region.
+
+### 🚚 Longer Lead Times May Be Contributing to Dead Stock
+
+Singapore suppliers have a higher average lead time (**28 days**) compared to Indian suppliers (**21 days**).
+
+At the same time, Singapore-sourced products generate substantially more dead-stock capital.
+
+While this does not prove a direct relationship, it suggests that longer lead times may encourage higher inventory holdings, increasing the risk of overstocking and eventual dead stock.
+
+### 🎯 Why This Analysis Matters
+
+Dead stock represents inventory that occupies warehouse space, consumes working capital, and provides no immediate return to the business.
+
+This analysis helps management identify:
+
+- 💰 Where inventory capital is being wasted
+- 🏭 Which suppliers contribute most to dead stock risk
+- 🌍 Which sourcing regions require closer monitoring
+- 📦 Which product categories may need improved demand forecasting
+
+### 🔄 Limitation & Next Step
+
+This analysis identifies where dead stock capital is currently locked, but it does not provide guidance on how future overstocking can be prevented.
+
+To reduce the risk of creating new dead stock, the next step is to determine optimal replenishment thresholds through Reorder Point Analysis. This will help ensure inventory is replenished at the right time while avoiding unnecessary stock accumulation.
