@@ -1,308 +1,255 @@
-## 🎯 Overview
-This document presents the key business insights derived from the inventory optimization analyses conducted for RetailMart BD. Using inventory transactions, product performance, supplier data, and stock movement patterns, multiple analytical frameworks were applied to identify revenue drivers, inventory risks, replenishment opportunities, and operational inefficiencies.
+# 📊 Analysis Findings — RetailMart BD
+### Inventory Optimization & Dead Stock Detection
 
-The following sections summarize the major findings from each analysis and explain their significance from a business perspective.
-
----
-
-## 📦 ABC Analysis
-
-### 🔍 Key Findings
-
-- Revenue is highly concentrated among a small group of products. Only **15 Category A products** account for approximately **69% of total revenue**, indicating that a limited number of SKUs drive the majority of business value.
-
-- **Fresh Soybean Oil 2L** emerged as the highest revenue-generating product, contributing nearly **7.8% of total revenue** on its own. This highlights its importance in maintaining overall sales performance.
-
-- Category B products represent the second tier of revenue contributors. While individually less impactful than Category A products, they collectively provide a meaningful share of total revenue and should be monitored to sustain business growth.
-
-- Category C contains **11 products** with relatively low revenue contribution. However, a closer review revealed that not all Category C products are underperforming inventory. Several belong to active categories such as **Healthcare, Home Care, Food & Beverage, and Personal Care**, suggesting that low revenue alone does not indicate low demand.
-
-### 💡 Business Implications
-
-- Category A products should receive the highest priority for inventory planning, replenishment, and stock availability, as stock-outs in these items could significantly impact revenue.
-
-- Category B products require balanced inventory management and periodic performance reviews to identify future growth opportunities.
-
-- Category C products should be evaluated more carefully before making inventory decisions, as some may still be regularly purchased despite their lower revenue contribution.
-
-### ⚠️ Limitation of ABC Analysis
-
-ABC Analysis focuses exclusively on **revenue contribution** and does not consider **purchase frequency, demand consistency, or demand variability**.
-
-As a result, products with similar revenue contributions can exhibit very different inventory behaviors:
-
-- Some products may generate low revenue but sell consistently throughout the year.
-- Others may generate low revenue because they experience very little customer demand.
-
-ABC Analysis alone cannot distinguish between these scenarios.
-
-### ➡️ Why We Proceeded to XYZ Analysis
-
-To gain a more complete understanding of inventory performance, the next step was to perform **XYZ Analysis**, which evaluates demand patterns and sales variability.
-
-By combining ABC and XYZ classifications, it becomes possible to distinguish between:
-
-- **Low-revenue but stable-demand products**
-- **Low-revenue and genuinely slow-moving products**
-
-This provides a stronger foundation for inventory optimization, stock planning, and product-level decision-making than ABC Analysis alone.
+This document summarizes the business insights derived from 8 analytical frameworks applied to RetailMart BD's 24-month inventory transaction data (January 2023 – December 2024). Each section explains what the data showed, why it matters, and what it couldn't answer on its own — leading naturally into the next analysis.
 
 ---
 
-## 📦 XYZ Analysis Findings
+## 1️⃣ ABC Analysis
 
 ### 🔍 Key Findings
 
-The XYZ Analysis classified 35 products based on demand variability and forecastability.
+- Revenue is heavily concentrated. Just **15 Category A products drive ~69% of total revenue** — a textbook Pareto distribution across a 35-SKU portfolio.
+- **Fresh Soybean Oil 2L** is the single largest revenue contributor at **7.8%** of total revenue, making it the most critical product for stock availability.
+- **Category C contains 11 products** with low revenue contribution — but not all of them are problematic. Several (Antacid Tablets, Harpic, Vim, Savlon) belong to active, everyday categories like Healthcare and Home Care, where low revenue simply reflects low unit price, not low demand.
 
-| Category | Product Count |
-|-----------|-----------:|
-| X (Stable Demand) | 16 |
-| Y (Moderately Variable Demand) | 14 |
-| Z (Highly Variable Demand) | 5 |
+### 💡 Business Implication
 
-A strong positive signal is that **30 out of 35 products (86%) fall into the X or Y categories**, indicating that most products have predictable demand patterns and can be forecasted with reasonable confidence.
+Category A products deserve the tightest inventory control — a stockout on any of these directly impacts revenue. Category C products should not be treated uniformly; some may still move consistently despite modest revenue numbers.
 
-Products in the **X category** demonstrated stable demand throughout the 24-month period, making them easier to forecast and manage from an inventory perspective.
+### ⚠️ Limitation
 
-### ⚠️ Z Category Insight
-
-The most important finding came from the **Z category**, which contains:
-
-- Premium Candle Set
-- Ceramic Mug Set
-- Aromatherapy Diffuser
-- Herbal Bath Salts
-- Imported Olive Oil
-
-Each of these products recorded **17 zero-sale months out of 24 months** and showed extremely high demand variability (CV > 160%).
-
-This confirms that these products are not only low-revenue items but also exhibit highly intermittent demand patterns.
-
-### 💡 Business Implications
-
-An important insight from this analysis is:
-
-> **Low Revenue ≠ Unstable Demand**
-
-Products such as Antacid Tablets, Harpic, Vim, Savlon, and Sensodyne appeared in the **C category of the ABC Analysis** but were classified as **X category in the XYZ Analysis**, indicating low revenue contribution but stable demand.
-
-In contrast, the five Z-category products showed both:
-
-- 📉 Low revenue contribution
-- 📦 Highly unpredictable demand
-
-This makes them strong candidates for slow-moving inventory review and stock optimization initiatives.
-
-### 🎯 Why This Analysis Matters
-
-While **ABC Analysis** identifies products that drive revenue, **XYZ Analysis** measures demand predictability.
-
-Together, they provide a more complete inventory management view by distinguishing between products that are merely low-revenue and those that are genuinely slow-moving or difficult to forecast. 🚀
-
-## Limitations of XYZ Analysis
-
-While XYZ Analysis effectively measures demand variability, it does not consider revenue contribution.
-
-For example, two products may both belong to Category X, but one may generate significantly higher revenue than the other.
-
-Therefore, XYZ Analysis should not be used in isolation for inventory decisions. It becomes significantly more valuable when combined with ABC Analysis to evaluate both revenue importance and demand predictability simultaneously.
+ABC Analysis measures **revenue contribution only** — it says nothing about demand consistency or how long stock has been sitting. Two products can have identical revenue and completely different inventory health. This is why XYZ Analysis follows.
 
 ---
 
-## 🔗 ABC-XYZ Matrix Analysis Findings
+## 2️⃣ XYZ Analysis
 
 ### 🔍 Key Findings
 
-The ABC-XYZ Matrix combined revenue contribution (ABC) and demand predictability (XYZ) to create a more actionable inventory segmentation model.
+| Category | Products | Demand Pattern |
+|---|---|---|
+| X — Stable | 16 | Low variability, easy to forecast |
+| Y — Variable | 14 | Moderate variability, manageable |
+| Z — Erratic | 5 | High variability, difficult to forecast |
 
-| Segment | Product Count | Revenue |
-|----------|-----------:|-----------:|
-| AX | 7 | 9.48M |
-| AY | 8 | 8.93M |
-| BX | 5 | 2.81M |
-| BY | 4 | 2.52M |
-| CX | 4 | 1.85M |
-| CY | 2 | 0.85M |
-| CZ | 5 | 0.23M |
+- **86% of products (30 of 35) fall in X or Y** — most of the portfolio has reasonably predictable demand, which is a healthy signal for a supply chain operation.
+- The **5 Z-category products** each recorded **17 zero-sale months out of 24** and a Coefficient of Variation above 160% — far beyond the 50% threshold for Z classification.
 
-A notable observation is that **all A-category products fall into either AX or AY segments**, meaning the company's highest revenue-generating products have either stable or moderately variable demand. No products were classified as AZ, indicating that none of the major revenue drivers suffer from highly unpredictable demand.
+> 🔑 **The products in Z are not just low-revenue — they are effectively inactive.**
 
-### 📈 Revenue Drivers
+### 💡 Business Implication
 
-The **AX and AY segments together generated more than 18 million revenue**, accounting for the majority of total business revenue.
+An important distinction surfaces here: products like Antacid Tablets and Savlon appeared in ABC's C-category (low revenue) but are X-category in XYZ (stable demand). They belong to a completely different risk tier than the Z-category products, even though ABC grouped them together.
 
-- 🟢 **AX Products** represent high-revenue products with stable demand, making them the most valuable and easiest products to forecast and manage.
-- 🟡 **AY Products** also generate significant revenue but exhibit moderate demand variability, requiring closer forecasting and inventory monitoring.
+### ⚠️ Limitation
 
-These segments contain the products that deserve the highest inventory planning priority.
-
-### 💡 Important Business Insight
-
-One of the most valuable findings is the presence of **CX products**.
-
-Products such as Antacid Tablets, Harpic, Vim, and Savlon were classified as:
-
-- 📉 Low Revenue Contribution (C)
-- 📦 Stable Demand (X)
-
-This demonstrates an important inventory management principle:
-
-> **Low Revenue ≠ Poor Product Performance**
-
-Although these products contribute less revenue, they maintain consistent demand and therefore continue to play an operational role in the business.
-
-### ⚠️ Slow-Moving Inventory Candidates
-
-The **CZ segment** contains:
-
-- Premium Candle Set
-- Ceramic Mug Set
-- Aromatherapy Diffuser
-- Herbal Bath Salts
-- Imported Olive Oil
-
-These products contribute only **0.23M revenue** and exhibit extremely high demand variability (Average CV = 166%).
-
-This confirms that they are not only low-revenue products but also highly intermittent-demand items, making them the strongest candidates for slow-moving inventory review and stock optimization initiatives.
-
-### 🎯 Why This Analysis Matters
-
-ABC Analysis identifies revenue importance, while XYZ Analysis measures demand predictability. By combining both perspectives, the ABC-XYZ Matrix enables more informed inventory decisions and helps distinguish between:
-
-- 💰 High-value products that require tight inventory control
-- 📦 Stable products that can be forecasted confidently
-- ⚠️ Slow-moving products that may require special inventory strategies
-
-The analysis ultimately provides a complete inventory prioritization framework by evaluating both business value and demand behavior simultaneously. 🚀
-
-### ⚠️ Limitation of ABC-XYZ Matrix Analysis
-
-While the ABC-XYZ Matrix provides valuable insights into revenue contribution and demand predictability, it does not consider how long inventory has remained in stock.
-
-For example, a product may belong to the CZ segment due to low revenue and highly variable demand, but the analysis alone cannot determine whether the inventory has been sitting in the warehouse for 30 days or 300 days.
-
-Therefore, ABC-XYZ Matrix should not be used as the final inventory assessment tool. To identify aging inventory, slow-moving stock, and potential dead-stock risks, a Stock Aging Analysis is required.
-
-This leads to the next stage of the analysis, where inventory is evaluated based on how long products remain unsold in storage.
-
+XYZ Analysis measures demand variability but ignores revenue contribution. A product can be X-category (stable) while still generating negligible revenue. For inventory decisions, neither analysis is sufficient alone — which is why they are combined next.
 
 ---
 
-## 📦 Stock Aging Analysis Findings
+## 3️⃣ ABC-XYZ Matrix Analysis
 
 ### 🔍 Key Findings
 
-The Stock Aging Analysis evaluated inventory health across all product-warehouse combinations by measuring the number of days since the last sale and the amount of capital currently tied up in stock.
+| Segment | Products | Revenue |
+|---|---|---|
+| AX | 7 | ৳9.48M |
+| AY | 8 | ৳8.93M |
+| BX | 5 | ৳2.81M |
+| BY | 4 | ৳2.52M |
+| CX | 4 | ৳1.85M |
+| CY | 2 | ৳0.85M |
+| CZ | 5 | ৳0.23M |
 
-| Aging Bucket | Product-Warehouse Count | Total Units | Tied-Up Capital |
-|-------------|-----------------------:|------------:|----------------:|
-| Active | 84 | 103,409 | 5.48M |
-| Slow Moving | 6 | 9,190 | 0.53M |
-| Dead Stock | 15 | 212 | 0.08M |
+- **No AZ products exist** — none of the company's highest revenue-generating products suffer from erratic demand. The top of the portfolio is both valuable and forecastable.
+- **AX + AY together generate over ৳18M** — these 15 products are the business's core, and their inventory health directly determines company performance.
+- **CX products** (Antacid Tablets, Harpic, Vim, Savlon) confirm an important principle: low revenue does not mean poor performance. These products maintain consistent demand and serve an operational role despite modest revenue figures.
+- **CZ products** contribute only ৳0.23M (0.87% of total revenue) while showing an average CV of 166% and 17 zero-sale months — the clearest dead stock signal in the entire portfolio.
 
-The results indicate that the overall inventory position is healthy, with the majority of stock actively moving across warehouses.
+### ⚠️ Limitation
 
-### ✅ Active Inventory Dominates the Business
-
-A total of **84 out of 105 product-warehouse combinations** were classified as Active.
-
-These products account for approximately **5.48 million of tied-up capital**, representing the overwhelming majority of inventory investment.
-
-This suggests that most inventory is being replenished and sold regularly, reducing the risk of excess stock accumulation and improving working capital utilization.
-
-### 💰 Slow-Moving Inventory Has Higher Financial Impact Than Dead Stock
-
-Although only 6 product-warehouse combinations were classified as Slow Moving, they account for approximately **0.53 million of tied-up capital**.
-
-This is significantly higher than the capital locked in Dead Stock.
-
-This finding suggests that management attention should not focus solely on dead stock. Slow-moving inventory may represent a larger financial burden due to its higher inventory value.
-
-### ⚠️ Dead Stock Exists but Financial Risk Remains Low
-
-The analysis identified **15 dead-stock combinations**, but the total capital tied up in these items is only **0.08 million**.
-
-This indicates that while dead stock exists within the network, its current financial impact is relatively limited.
-
-As a result, dead stock does not appear to be a major working capital concern at this stage.
-
-### 🏭 Importance of Warehouse-Level Analysis
-
-This analysis was performed at the product-warehouse level rather than at the product level.
-
-This approach enables the business to identify inventory ageing issues within specific warehouse locations, making inventory optimization efforts more targeted and actionable.
-
-### 🎯 Why This Analysis Matters
-
-While ABC Analysis identifies revenue importance and XYZ Analysis measures demand predictability, Stock Aging Analysis introduces the time dimension by revealing how long inventory has remained unsold.
-
-Together, these analyses provide a more complete inventory management framework by helping the business understand:
-
-- 💰 Which products generate the most value
-- 📈 Which products have predictable demand
-- 📦 Which inventory is actively moving
-- ⚠️ Which inventory may require corrective action
-
-### 🔄 Limitation & Next Step
-
-Stock Aging Analysis identifies how long inventory has remained unsold, but it does not explain whether current stock levels are appropriate relative to expected demand.
-
-For example, an item may be classified as Active while still carrying excess inventory, or it may have low stock despite strong sales activity.
-
-To evaluate inventory sufficiency and replenishment effectiveness, the next stage of analysis should focus on stock coverage, inventory turnover, or inventory optimization metrics.
-
-This will help determine not only how old inventory is, but also whether current inventory levels are aligned with business demand.
+The ABC-XYZ Matrix identifies *what* the inventory looks like today in terms of revenue and demand — but it cannot tell you *how long* inventory has been sitting unsold. A CZ product could have been inactive for 30 days or 600 days. To answer that question, Stock Aging Analysis is required.
 
 ---
 
-## 💰 Dead Stock Financial Impact Analysis Findings
+## 4️⃣ Stock Aging Analysis
 
 ### 🔍 Key Findings
 
-This analysis evaluated the financial impact of dead stock inventory by identifying which product categories, suppliers, and supplier countries contribute most to inventory capital that is no longer generating business value.
+| Aging Bucket | Product-Warehouse Combinations | Units | Tied-Up Capital |
+|---|---|---|---|
+| 🟢 Active | 84 | 103,409 | ৳5.48M |
+| 🟡 Slow Moving | 6 | 9,190 | ৳0.53M |
+| 🔴 Dead Stock | 15 | 212 | ৳75,980 |
 
-### 📦 Lifestyle Products Drive the Majority of Dead Stock Capital
+- **84 of 105 product-warehouse combinations are Active** — the majority of inventory is moving regularly, which reflects a generally healthy stock position.
+- **Slow Moving inventory (৳0.53M)** carries more tied-up capital than Dead Stock in absolute terms — a reminder that management attention should not be narrowly focused on dead stock alone.
+- **15 Dead Stock combinations** involve only 5 unique products, with idle periods ranging from **523 to 657 days**. Herbal Bath Salts (WH002) holds the longest idle record at **657 days**.
 
-The **Lifestyle category** generated the highest amount of dead-stock capital, accounting for approximately **55% of total dead inventory value**.
+> 🔑 **The Slow Moving products are not genuinely at risk.** Their classification is an artifact of the dataset's cutoff date (2024-12-31) — their most recent sale fell just beyond the 30-day Active threshold. In a live system with a rolling reference date, most would remain Active.
 
-This suggests that demand for these products was significantly lower than expected, resulting in inventory remaining unsold for extended periods.
+### ⚠️ Limitation
 
-### 🏭 Pacific Imports Ltd Is the Largest Contributor to Dead Stock
+Stock Aging Analysis reveals how old inventory is, but not whether current stock levels are proportionate to expected demand. A product can be Active while still carrying excess stock. To measure inventory utilization efficiency, Reorder Point and Inventory Turnover analyses follow.
 
-Among all suppliers, **Pacific Imports Ltd** contributed the highest dead-stock value, representing over **80% of total dead capital**.
+---
 
-This indicates that inventory sourced from this supplier requires closer review to determine whether purchasing volumes, demand forecasts, or replenishment decisions need adjustment.
+## 5️⃣ Dead Stock Financial Impact Analysis
 
-### 🌍 Singapore-Sourced Products Carry the Highest Inventory Risk
+### 🔍 Key Findings
 
-Products sourced from **Singapore** account for the majority of dead-stock capital in the business.
+**By Category:**
+| Category | Dead Stock Capital | Share |
+|---|---|---|
+| 🏮 Lifestyle | ৳41,950 | 55.2% |
+| 🫒 Food & Beverage | ৳19,680 | 25.9% |
+| 🧴 Personal Care | ৳14,350 | 18.9% |
 
-Although only a small number of products are involved, they represent a disproportionately large share of inventory value that is no longer moving.
+**By Supplier:**
+| Supplier | Country | Dead Stock Capital | % of Dead Total |
+|---|---|---|---|
+| Pacific Imports Ltd | 🇸🇬 Singapore | ৳61,630 | 81% |
+| Globe Traders (Import) | 🇮🇳 India | ৳14,350 | 19% |
+| All other 8 suppliers | 🇧🇩 Bangladesh | ৳0 | 0% |
 
-This highlights a concentration of inventory risk within a specific sourcing region.
+- **100% of dead stock capital traces back to just 2 of 10 suppliers** — both import suppliers with the longest lead times in the network (21–28 days vs. 4–12 days for local suppliers).
+- **Pacific Imports Ltd alone accounts for 81% of total dead stock capital**, with 4 of its 5 supplied products now classified as dead stock (80% dead rate).
+- The correlation between lead time length and dead stock risk is clear — longer lead times encourage larger buffer orders, and when demand for niche products doesn't materialize, those buffers become dead stock.
 
-### 🚚 Longer Lead Times May Be Contributing to Dead Stock
+> 🔑 **This is not a coincidence — it's a procurement risk pattern.** The `reliability_score` in supplier master data independently rated these two suppliers lowest (72 and 78), and the actual inventory outcome confirms that signal.
 
-Singapore suppliers have a higher average lead time (**28 days**) compared to Indian suppliers (**21 days**).
+### ⚠️ Limitation
 
-At the same time, Singapore-sourced products generate substantially more dead-stock capital.
+This analysis identifies where dead stock exists and which suppliers contributed to it — but it does not provide guidance on preventing future overstocking. That requires understanding optimal replenishment thresholds, which the Reorder Point Analysis addresses next.
 
-While this does not prove a direct relationship, it suggests that longer lead times may encourage higher inventory holdings, increasing the risk of overstocking and eventual dead stock.
+---
 
-### 🎯 Why This Analysis Matters
+## 6️⃣ Reorder Point Analysis
 
-Dead stock represents inventory that occupies warehouse space, consumes working capital, and provides no immediate return to the business.
+### 🔍 Key Findings
 
-This analysis helps management identify:
+- **All 35 products are currently classified as Sufficient Stock** — no product falls below its calculated reorder point, meaning no immediate replenishment action is needed.
+- Products with the **highest reorder points** are those with the highest daily demand and/or the longest supplier lead times:
+  - Maggi Noodles (PRD023) → **720 units**
+  - Paracetamol 500mg (PRD009) → **699 units**
+  - Cocola Noodles (PRD022) → **687 units**
+- Dead stock and Lifestyle products (PRD031–PRD035) show **reorder points of just 4–6 units** — far below their current stock levels — confirming that replenishment is unnecessary and that existing stock will remain idle without demand recovery.
 
-- 💰 Where inventory capital is being wasted
-- 🏭 Which suppliers contribute most to dead stock risk
-- 🌍 Which sourcing regions require closer monitoring
-- 📦 Which product categories may need improved demand forecasting
+> 🔑 **Zero reorder alerts is not a passive result — it's a signal.** The company maintains such high buffers across all products that no product is anywhere near needing replenishment. This is directly connected to the low inventory turnover ratios found in the next analysis.
 
-### 🔄 Limitation & Next Step
+### ⚠️ Limitation
 
-This analysis identifies where dead stock capital is currently locked, but it does not provide guidance on how future overstocking can be prevented.
+Reorder Point Analysis identifies *when* to reorder — but not *how efficiently* inventory is being used between restocking events. A product can be comfortably above its reorder point while still moving far too slowly. Inventory Turnover Analysis addresses this directly.
 
-To reduce the risk of creating new dead stock, the next step is to determine optimal replenishment thresholds through Reorder Point Analysis. This will help ensure inventory is replenished at the right time while avoiding unnecessary stock accumulation.
+---
+
+## 7️⃣ Inventory Turnover Analysis
+
+### 🔍 Key Findings
+
+> **Note:** Turnover was calculated using recent 6-month COGS (annualized) rather than full 24-month COGS. This prevents dead stock products from appearing artificially healthy due to historical sales that occurred before they became inactive.
+
+**Bottom performers — Dead Stock products:**
+
+| Product | Turnover Ratio | Days Inventory Outstanding |
+|---|---|---|
+| Premium Candle Set | 0.00 | 999 |
+| Ceramic Mug Set | 0.00 | 999 |
+| Aromatherapy Diffuser | 0.00 | 999 |
+| Herbal Bath Salts | 0.00 | 999 |
+| Imported Olive Oil | 0.00 | 999 |
+
+**Top performers:**
+
+| Product | Turnover Ratio | Days Inventory Outstanding |
+|---|---|---|
+| Maggi Noodles 75g | 2.90 | 126 days |
+| Cocola Noodles 75g | 2.87 | 127 days |
+
+**By Category:**
+
+| Category | Avg Turnover | Avg DIO |
+|---|---|---|
+| 🍜 Food & Beverage | 1.54 | 290 days |
+| 💊 Healthcare | 1.52 | 242 days |
+| 🏠 Home Care | 1.34 | 275 days |
+| 🧴 Personal Care | 1.24 | 360 days |
+| 🕯️ Lifestyle | 0.00 | 999 days |
+
+- Even the **best-performing active products top out at ~2.9x turnover** — well below the 4–8x range typical for healthy FMCG operations. This is a company-wide signal, not an isolated issue.
+- **High revenue ≠ fast inventory movement.** Fresh Soybean Oil generates the most revenue in the portfolio but doesn't rank among the highest-turnover products — capital efficiency and revenue contribution are not the same metric.
+
+> 🔑 **The low turnover across active products — not just dead stock — confirms that the company's procurement approach is systematically buffer-heavy.** Stock levels are consistently higher than what demand patterns require.
+
+### ⚠️ Limitation
+
+Inventory Turnover measures how efficiently inventory converts to sales — but it doesn't explain *why* certain suppliers are associated with worse inventory performance. Supplier Performance Analysis connects the dots.
+
+---
+
+## 8️⃣ Supplier Performance Analysis
+
+### 🔍 Key Findings
+
+**Revenue Contribution by Supplier:**
+
+| Supplier | 🌍 Country | Lead Time | Reliability Score | COGS Contribution |
+|---|---|---|---|---|
+| Reckitt Benckiser BD | 🇧🇩 Bangladesh | 10 days | 88 | ৳3.29M |
+| Unilever BD Ltd | 🇧🇩 Bangladesh | 7 days | 92 | ৳3.15M |
+| Pran-RFL Group | 🇧🇩 Bangladesh | 6 days | 90 | ৳3.15M |
+| Nestle Bangladesh | 🇧🇩 Bangladesh | 12 days | 87 | ৳2.85M |
+| Pacific Imports Ltd | 🇸🇬 Singapore | 28 days | 72 | ৳0.65M |
+| Globe Traders (Import) | 🇮🇳 India | 21 days | 78 | ৳1.67M |
+
+**Dead Stock by Supplier:**
+
+| Supplier | Products Supplied | Dead Products | Dead % | Dead Capital |
+|---|---|---|---|---|
+| Pacific Imports Ltd 🇸🇬 | 5 | 4 | **80%** | **৳61,630** |
+| Globe Traders (Import) 🇮🇳 | 3 | 1 | **33.3%** | **৳14,350** |
+| All 8 local suppliers 🇧🇩 | 27 | 0 | **0%** | **৳0** |
+
+**Lead Time vs Dead Stock Risk:**
+
+| Supplier Group | Lead Time | Dead Stock |
+|---|---|---|
+| 🇧🇩 Local (8 suppliers) | 4–12 days | None |
+| 🌏 Import (2 suppliers) | 21–28 days | ৳75,980 (100% of total) |
+
+- **The `reliability_score` assigned in master data aligns precisely with actual dead-stock outcomes** — Pacific Imports and Globe Traders had the two lowest reliability scores (72 and 78), and they produced the only dead stock in the portfolio. Two independent data sources confirming the same signal.
+- Local suppliers collectively generate the majority of revenue and maintain zero dead stock exposure — a strong case for prioritizing local sourcing for niche or lower-demand product categories.
+- Long lead times force larger buffer purchases to avoid stockouts — but when demand for niche products doesn't materialise, those buffers become stranded capital.
+
+> 🔑 **Dead stock is not spread evenly across the supplier network. It is entirely concentrated in 2 of 10 suppliers — both import, both long-lead-time, both low reliability-score.** This is a procurement risk pattern, not a coincidence.
+
+### ⚠️ Limitation
+
+This is an **inventory-focused supplier assessment** — it evaluates lead time, reliability score, and dead stock exposure only. It does not cover purchase price, order fill rate, delivery accuracy, or product quality. A complete supplier evaluation would require additional data sources beyond inventory transactions.
+
+---
+
+## 🔗 How the Analyses Connect
+
+Each analysis answered one question — and revealed the next question to ask:
+
+```
+ABC Analysis          → Which products matter most by revenue?
+      ↓
+XYZ Analysis          → Which products have predictable demand?
+      ↓
+ABC-XYZ Matrix        → Which products are truly problematic vs. just low-revenue?
+      ↓
+Stock Aging           → How long has that problematic inventory been sitting?
+      ↓
+Dead Stock Impact     → Where is the capital locked, and which suppliers caused it?
+      ↓
+Reorder Point         → Does any product need replenishment right now?
+      ↓
+Inventory Turnover    → How efficiently is inventory being converted to sales?
+      ↓
+Supplier Performance  → Which suppliers are driving inventory risk?
+```
+
+No single analysis tells the full story. The value comes from layering them.
