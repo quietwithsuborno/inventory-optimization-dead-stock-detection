@@ -1,5 +1,4 @@
-# 📊 Dashboard Insights — RetailMart BD
-### Inventory Optimization & Dead Stock Detection
+# 📊 Dashboard Insights
 
 This document presents the key business insights derived from each of the 5 Power BI dashboard pages. Each section covers what the visuals revealed, what it means for the business, and what action it points toward.
 
