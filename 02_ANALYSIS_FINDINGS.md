@@ -1,5 +1,4 @@
-# 📊 Analysis Findings — RetailMart BD
-### Inventory Optimization & Dead Stock Detection
+# 📊 Analysis Findings
 
 This document summarizes the business insights derived from 8 analytical frameworks applied to RetailMart BD's 24-month inventory transaction data (January 2023 – December 2024). Each section explains what the data showed, why it matters, and what it couldn't answer on its own — leading naturally into the next analysis.
 
