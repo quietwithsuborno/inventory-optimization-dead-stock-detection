@@ -115,6 +115,8 @@ The dashboard adds a further layer of logic — 20+ DAX measures handling condit
 
 ## 📊 Dashboard Preview
 
+![Dashboard Preview](04_necessary_image/dashboard_preview.gif)
+
 | Page | Focus |
 |---|---|
 | 🗂️ **Executive Overview** | KPI summary, stock aging distribution, revenue by category, dead stock by supplier country |
