@@ -1,15 +1,4 @@
-# Inventory Optimization & Dead Stock Detection
-### Project Documentation — RetailMart BD
-
-**Analysis Period:** January 2023 – December 2024
-
-**Tools:** Excel · SQL Server (SSMS) · Power BI
-
-**Prepared by:** Suborno
-
-**Project type:** Self-directed portfolio project | Simulated company data
-
----
+# Project Documentation
 
 ## 1️⃣ Executive Summary
 
