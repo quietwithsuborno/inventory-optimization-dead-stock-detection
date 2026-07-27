@@ -115,7 +115,7 @@ The dashboard adds a further layer of logic — 20+ DAX measures handling condit
 
 ## 📊 Dashboard Preview
 
-![Dashboard Preview](04_necessary_image/dashboard_preview.gif)
+![Dashboard Preview](04_necessary_image/dashboards_view.gif)
 
 | Page | Focus |
 |---|---|
