@@ -6,6 +6,10 @@ This document presents the key business insights derived from each of the 5 Powe
 
 ## Page 1 — Executive Overview
 
+<p align="center">
+  <img src="03_powerbi/dashboard_snapshots/1. executive_summary.PNG" width="800">
+</p>
+
 ### 📌 Snapshot
 
 | Metric | Value |
@@ -59,6 +63,10 @@ Singapore-sourced products account for the majority of dead stock capital. India
 ---
 
 ## Page 2 — ABC-XYZ Segmentation
+
+<p align="center">
+  <img src="03_powerbi/dashboard_snapshots/2. abc_xyc_segmentation.PNG" width="800">
+</p>
 
 ### 📌 Snapshot
 
@@ -116,6 +124,10 @@ Fresh Soybean Oil 2L (AX, CV: 18.41%) and Surf Excel 1kg (AY, CV: 21.89%) genera
 
 ## Page 3 — Dead & Slow Stock Report
 
+<p align="center">
+  <img src="03_powerbi/dashboard_snapshots/3. dead_and_slow_stock.PNG" width="800">
+</p>
+
 ### 📌 Snapshot
 
 | Metric | Value |
@@ -167,6 +179,10 @@ All 5 dead-stock products are imported, niche, or premium items with highly irre
 ---
 
 ## Page 4 — Reorder Alert Panel
+
+<p align="center">
+  <img src="03_powerbi/dashboard_snapshots/4. reorder_alert_panel.PNG" width="800">
+</p>
 
 ### 📌 Snapshot
 
@@ -226,6 +242,10 @@ Calculated reorder points frequently differ substantially from the static reorde
 ---
 
 ## Page 5 — Trend Analysis
+
+<p align="center">
+  <img src="03_powerbi/dashboard_snapshots/5. trend_analysis.PNG" width="800">
+</p>
 
 ### 📌 Snapshot
 
